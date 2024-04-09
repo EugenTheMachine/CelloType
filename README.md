@@ -65,6 +65,7 @@ python main.py
 # Quick started
 Pretrained models can be downloaded from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) folder.
 ```python
+from skimage import io
 from cellotype.predict import CelloTypePredictor
 
 img = io.imread('data/example/example_tissuenet.png') # [H, W, 3]
