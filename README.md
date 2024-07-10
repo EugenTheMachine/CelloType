@@ -98,7 +98,7 @@ python sahi_inference.py
 3. Test the model and visualize results
 
 ## Cell Segmentation (TissueNet Dataset)
-### 1. Download data and pretrained models weights
+### 1. Download data and pretrained models weights 
 
 #### 1.1 Download the processed data
 
@@ -112,7 +112,7 @@ cd ..
 ```
 
 
-#### 1.2 Download pretrained models weights
+#### 1.2 Download COCO pretrained models weights (optional)
 
 Download ```models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth``` from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) and put it in the ```cellotype/models``` folder.
 <!-- ```bash
@@ -136,8 +136,48 @@ For reference, our trained weights ```models/tissuenet_model_0019999.pth``` can 
 python test_tissuenet.py --num-gpus 1
 ```
 
+The example prediction saved in the ```output/tissuenet``` folder.
+
+<img src="output/tissuenet/0_pred.png" alt="drawing" width="150"/>
+
+## Cell Segmentation (Xenium Spatial Transcriptomics Dataset)
+### 1. Download data and pretrained models weights 
+
+#### 1.1 Download the processed data
+IMPORTANT: Note that the raw data is from [Xenium Human Lung Dataset](https://www.10xgenomics.com/datasets/preview-data-ffpe-human-lung-cancer-with-xenium-multimodal-cell-segmentation-1-standard). This processed data is for demo purpose ONLY!
+
+Download ```data/example_xenium.zip``` from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) and put it in the ```data``` folder. Then unzip it.
+```bash
+cd data
+unzip example_xenium.zip
+cd ..
+```
+
+#### 1.2 Download pretrained models weights (optional)
+
+Download ```models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth``` from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) and put it in the ```cellotype/models``` folder.
+
+### 2. Train model
+
+```bash
+python train_xenium.py --num-gpus 4
+```
+
+The parameters are optimized for 4*A100 (40GB) environment, if your machine does not have enough GPU memory, you can reduce the batch size by changing the ```IMS_PER_BATCH``` in ```configs/Base-COCO-InstanceSegmentation.yaml```. For reference, the training take ~10 hours on 4\*A100 (40GB) environment.
+
+
+### 3. Test model and visualize results
+For reference, our trained weights ```models/xenium_model_0001499.pth``` can be downloaded from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) folder.
+```bash
+python test_xenium.py --num-gpus 1
+```
+
+The example prediction saved in the ```output/xenium``` folder.
+
+<img src="output/xenium/0_pred.png" alt="drawing" width="150"/>
+
 ## Cell Annotation (CODEX CRC Dataset)
-### 1. Download data and pretrained models weights
+### 1. Download data and pretrained models weights 
 
 #### 1.1 Download the processed data
 
@@ -150,7 +190,7 @@ unzip example_codex_crc.zip
 cd ..
 ```
 
-#### 1.2 Download pretrained models weights
+#### 1.2 Download pretrained models weights (optional)
 
 Download ```models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth``` from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) and put it in the ```cellotype/models``` folder.
 
@@ -164,11 +204,14 @@ The parameters are optimized for 4*A100 (40GB) environment, if your machine does
 
 
 ### 3. Test model and visualize results
-For reference, our trained weights ```models/crc_model_00059999.pth``` can be downloaded from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) folder.
+For reference, our trained weights ```models/crc_model_0005999.pth``` can be downloaded from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) folder.
 ```bash
 python test_crc.py --num-gpus 1
 ```
 
+The example prediction saved in the ```output/codex``` folder.
+
+<img src="output/codex/0_pred.png" alt="drawing" width="150"/>
 
 ### Citation   
 ```
