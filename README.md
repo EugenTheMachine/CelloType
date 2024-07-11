@@ -153,7 +153,7 @@ unzip example_xenium.zip
 cd ..
 ```
 
-#### 1.2 Download pretrained models weights (optional)
+#### 1.2 Download COCO pretrained models weights (optional)
 
 Download ```models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth``` from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) and put it in the ```cellotype/models``` folder.
 
@@ -190,7 +190,7 @@ unzip example_codex_crc.zip
 cd ..
 ```
 
-#### 1.2 Download pretrained models weights (optional)
+#### 1.2 Download COCO pretrained models weights (optional)
 
 Download ```models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth``` from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) and put it in the ```cellotype/models``` folder.
 
