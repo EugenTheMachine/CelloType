@@ -15,7 +15,7 @@ Conference
 </div>
 
 # Description   
-An end-to-end Transformer-based method for automated cell/nucleus segmentation and cell type classification  
+CelloType is an end-to-end Transformer-based method for automated cell/nucleus segmentation and cell type classification  
 
 ![overview](figures/overview.png)
 
