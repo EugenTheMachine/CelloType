@@ -85,11 +85,6 @@ Example Notebook:
 
 [2. CelloType Classification Example](notebooks/tissue_annotation.ipynb)
 
-## Inference Cell Segmentation for Large image using Slicing Aided Hyper Inference (SAHI)
-
-```bash
-python sahi_inference.py 
-```
 
 # Model Training
 ## Workflow
