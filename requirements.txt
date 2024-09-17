@@ -7,5 +7,5 @@ submitit
 scikit-image
 opencv-python
 pycocotools
+gdown
 sahi
-deepcell

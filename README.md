@@ -70,11 +70,11 @@ from cellotype.predict import CelloTypePredictor
 
 img = io.imread('data/example/example_tissuenet.png') # [H, W, 3]
 
-model = CelloTypePredictor(model_path='cellotype/models/tissuenet_model_0019999.pth',
+model = CelloTypePredictor(model_path='./models/tissuenet_model_0019999.pth',
   confidence_thresh=0.3, 
   max_det=1000, 
   device='cuda', 
-  config_path='cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml')
+  config_path='./configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml')
 
 mask = model.predict(img) # [H, W]
 ```

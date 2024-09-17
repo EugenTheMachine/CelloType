@@ -8,10 +8,10 @@ def setup(args):
 
     add_deeplab_config(cfg)
     add_maskdino_config(cfg)
-    args.config_file = 'cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
+    args.config_file = './configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
-    cfg.MODEL.WEIGHTS = 'cellotype/models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth'
+    cfg.MODEL.WEIGHTS = './models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth'
     
     cfg.MODEL.IN_CHANS = 3
     cfg.DATASETS.TRAIN = ("cell_train",)

@@ -9,7 +9,7 @@ def setup(args):
     # for poly lr schedule
     add_deeplab_config(cfg)
     add_maskdino_config(cfg)
-    args.config_file = 'cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
+    args.config_file = './configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
 
@@ -21,7 +21,7 @@ def setup(args):
     cfg.SOLVER.AMP.ENABLED = False
     cfg.MODEL.PIXEL_MEAN = [128 for _ in range(92)]
     cfg.MODEL.PIXEL_STD = [11 for _ in range(92)]
-    cfg.MODEL.WEIGHTS = 'cellotype/models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth'
+    cfg.MODEL.WEIGHTS = './models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth'
     cfg.freeze()
     default_setup(cfg, args)
     setup_logger(output=cfg.OUTPUT_DIR, distributed_rank=comm.get_rank(), name="cellotype")

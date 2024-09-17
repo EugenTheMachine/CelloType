@@ -16,7 +16,7 @@ def setup(args):
     # for poly lr schedule
     add_deeplab_config(cfg)
     add_maskdino_config(cfg)
-    args.config_file = 'cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
+    args.config_file = './configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
 
@@ -25,7 +25,7 @@ def setup(args):
     cfg.DATASETS.TEST = ('cell_test',)
     cfg.OUTPUT_DIR = 'output/codex'
     cfg.SOLVER.AMP.ENABLED = False
-    cfg.MODEL.WEIGHTS = 'cellotype/models/crc_model_0005999.pth'
+    cfg.MODEL.WEIGHTS = './models/crc_model_0005999.pth'
     cfg.TEST.DETECTIONS_PER_IMAGE = 1000
     cfg.MODEL.PIXEL_MEAN = [128 for _ in range(92)]
     cfg.MODEL.PIXEL_STD = [11 for _ in range(92)]

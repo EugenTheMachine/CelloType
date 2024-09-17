@@ -14,7 +14,7 @@ def setup(args):
     # for poly lr schedule
     add_deeplab_config(cfg)
     add_maskdino_config(cfg)
-    args.config_file = 'cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
+    args.config_file = './configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml'
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
     cfg.MODEL.IN_CHANS = 3
@@ -22,7 +22,7 @@ def setup(args):
     cfg.DATASETS.TEST = ('cell_test',)
     cfg.OUTPUT_DIR = 'output/xenium'
     cfg.SOLVER.AMP.ENABLED = False
-    cfg.MODEL.WEIGHTS = 'cellotype/models/xenium_model_0001499.pth'
+    cfg.MODEL.WEIGHTS = './models/xenium_model_0001499.pth'
     cfg.TEST.DETECTIONS_PER_IMAGE = 500
     cfg.MODEL.DEVICE = 'cuda'
 
