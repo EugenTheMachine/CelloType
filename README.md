@@ -132,7 +132,7 @@ cd models
 cd ..
 ``` -->
 
-### 2. Train model
+<!-- ### 2. Train model
 
 ```bash
 python train_tissuenet.py --num-gpus 4
@@ -222,7 +222,7 @@ python test_crc.py --num-gpus 1
 
 The example prediction saved in the ```output/codex``` folder.
 
-<img src="output/codex/0_pred.png" alt="drawing" width="150"/> -->
+<img src="output/codex/0_pred.png" alt="drawing" width="150"/> --> -->
 
 ### Citation   
 ```
