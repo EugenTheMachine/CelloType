@@ -3,14 +3,14 @@ Quickstart
 
 Clone the repository:
 
-.. code-block:: console
+.. code-block:: bash
 
     git clone https://github.com/maxpmx/CelloType.git
     cd CelloType
 
 Then Download the model weights:
 
-.. code-block:: console
+.. code-block:: bash
 
     cd data
     sh download.sh
