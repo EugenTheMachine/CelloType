@@ -15,11 +15,11 @@ CelloType is an end-to-end Transformer-based method for automated cell/nucleus s
    :caption: Model Training:
 
    train_tn
-   train_codex
    train_st
-
+   train_codex
+   
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Examples:
 
    notebooks/cell_segmentation

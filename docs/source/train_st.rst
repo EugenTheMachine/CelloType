@@ -1,11 +1,11 @@
 Cell Segmentation (Xenium Spatial Transcriptomics)
 ------------------------------
 
-1. Download data and pretrained models weights
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Download data and pretrained models weights
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.1 Download the processed data
--------------------------------
+Download the processed data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **IMPORTANT**: Note that the raw data is from `TissueNet <https://datasets.deepcell.org/>`_, this processed data is for demo purpose ONLY!
 
@@ -17,13 +17,14 @@ Download ``data/example_tissuenet.zip`` from the `Drive <https://upenn.box.com/s
     unzip example_tissuenet.zip
     cd ..
 
-1.2 Download COCO pretrained models weights (optional)
-------------------------------------------------------
+Download COCO pretrained models weights (optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download ``models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth`` from the `Drive <https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv>`_ and put it in the ``cellotype/models`` folder.
 
 2. Train model
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. code-block:: bash
 
@@ -31,8 +32,8 @@ Download ``models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_ma
 
 The parameters are optimized for 4\*A100 (40GB) environment, if your machine does not have enough GPU memory, you can reduce the batch size by changing the ``IMS_PER_BATCH`` in ``configs/Base-COCO-InstanceSegmentation.yaml``.
 
-3. Test model and visualize results
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Test model and visualize results
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For reference, our trained weights ``models/tissuenet_model_0019999.pth`` can be downloaded from the `Drive <https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv>`_ folder.
 
