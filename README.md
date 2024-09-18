@@ -26,7 +26,7 @@ CelloType is an end-to-end Transformer-based method for automated cell/nucleus s
 
 ![example](figures/codex_example.png)
 
-Our code is based on open-source projects [Detectron2](https://github.com/facebookresearch/detectron2), [Mask DINO](https://github.com/IDEA-Research/MaskDINO).
+Our codes are based on open-source projects [Detectron2](https://github.com/facebookresearch/detectron2), [Mask DINO](https://github.com/IDEA-Research/MaskDINO).
 
 ## Installation
 First, install dependencies 
@@ -72,9 +72,9 @@ cd CelloType
 Then Download the model weights:
 
 ```bash
-    cd data
-    sh download.sh
-    cd ..
+cd data
+sh download.sh
+cd ..
 ```
 
 ```python
@@ -222,7 +222,7 @@ python test_crc.py --num-gpus 1
 
 The example prediction saved in the ```output/codex``` folder.
 
-<img src="output/codex/0_pred.png" alt="drawing" width="150"/> --> -->
+<img src="output/codex/0_pred.png" alt="drawing" width="150"/> -->
 
 ### Citation   
 ```
