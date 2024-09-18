@@ -44,5 +44,5 @@ For reference, our trained weights ``models/tissuenet_model_0019999.pth`` can be
 The example prediction saved in the ``output/tissuenet`` folder.
 
 .. image:: ../../output/tissuenet/0_pred.png
-    :width: 150px
+    :width: 250px
     :alt: drawing

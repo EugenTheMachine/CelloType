@@ -42,6 +42,6 @@ For reference, our trained weights ``models/crc_model_0005999.pth`` can be downl
 
 The example prediction saved in the ``output/codex`` folder.
 
-.. image:: output/codex/0_pred.png
-    :width: 150px
+.. image:: ../../output/codex/0_pred.png
+    :width: 250px
     :alt: drawing

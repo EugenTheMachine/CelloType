@@ -42,16 +42,14 @@ conda install pytorch==1.9.0 torchvision==0.10.0 cudatoolkit=11.1 -c pytorch -c 
 python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 # (add --user if you don't have permission)
 
-# clone and install the project   
-git clone https://github.com/maxpmx/CelloType.git
-cd CelloType
-pip install -r requirements.txt
-
 # Compile Deformable-DETR CUDA operators
 git clone https://github.com/fundamentalvision/Deformable-DETR.git
 cd Deformable-DETR
 cd ./models/ops
 sh ./make.sh
+
+# clone and install the project   
+pip install cellotype
 ```
  <!-- Next, navigate to the folder and run it.   
  ```bash
@@ -63,7 +61,22 @@ python main.py
  ``` -->
 
 # Quick started
-Pretrained models can be downloaded from the [Drive](https://upenn.box.com/s/str98paa7p40ns32mchhjsc4ra92pumv) folder.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/maxpmx/CelloType.git
+cd CelloType
+```
+
+Then Download the model weights:
+
+```bash
+    cd data
+    sh download.sh
+    cd ..
+```
+
 ```python
 from skimage import io
 from cellotype.predict import CelloTypePredictor
@@ -79,7 +92,10 @@ model = CelloTypePredictor(model_path='./models/tissuenet_model_0019999.pth',
 mask = model.predict(img) # [H, W]
 ```
 
-Example Notebook: 
+# Documentation
+The documentation is available at [CelloType](https://cellotype.readthedocs.io/)
+
+<!-- Example Notebook: 
 
 [1. CelloType Segmentation Example](notebooks/cell_segmentation.ipynb)
 
@@ -206,7 +222,7 @@ python test_crc.py --num-gpus 1
 
 The example prediction saved in the ```output/codex``` folder.
 
-<img src="output/codex/0_pred.png" alt="drawing" width="150"/>
+<img src="output/codex/0_pred.png" alt="drawing" width="150"/> -->
 
 ### Citation   
 ```

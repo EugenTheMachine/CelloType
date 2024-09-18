@@ -42,6 +42,6 @@ For reference, our trained weights ``models/xenium_model_0001499.pth`` can be do
 
 The example prediction saved in the ``output/xenium`` folder.
 
-.. image:: output/xenium/0_pred.png
-    :width: 150px
+.. image:: ../../output/xenium/0_pred.png
+    :width: 250px
     :alt: drawing
