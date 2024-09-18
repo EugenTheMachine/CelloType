@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+CelloType
 ===================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
@@ -9,14 +9,25 @@ and offers a *simple* and *intuitive* API.
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
-.. note::
+.. toctree::
+   :maxdepth: 3
+   :caption: Basics:
 
-   This project is under active development.
-
-Contents
---------
+   installation
+   quickstart
 
 .. toctree::
+   :maxdepth: 3
+   :caption: Model Training:
 
-   usage
-   api
+   train_tn
+   train_codex
+   train_st
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Examples:
+
+   notebooks/segmentation
+   notebooks/annotation
+   
