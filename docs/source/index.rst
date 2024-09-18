@@ -1,13 +1,7 @@
 CelloType
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+CelloType is an end-to-end Transformer-based method for automated cell/nucleus segmentation and cell type classification  
 
 .. toctree::
    :maxdepth: 3
@@ -28,6 +22,6 @@ how to :ref:`installation` the project.
    :maxdepth: 3
    :caption: Examples:
 
-   notebooks/segmentation
-   notebooks/annotation
+   notebooks/cell_segmentation
+   notebooks/tissue_annotation
    
