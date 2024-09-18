@@ -1,12 +1,13 @@
-cython
-scipy
-shapely
-timm
-h5py
-submitit
-scikit-image
-opencv-python
-pycocotools
-gdown
-sahi
+m2r2
+docutils
+mock
+Sphinx
+docutils
+ipython
+nbsphinx
+nbsphinx-link
+lxml_html_clean  # Required for nbsphinx
+sphinx-rtd-theme>=0.5.2
+sphinx-gallery
+pillow
 
