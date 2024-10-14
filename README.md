@@ -226,11 +226,11 @@ The example prediction saved in the ```output/codex``` folder.
 
 ### Citation   
 ```
-@article{YourName,
-  title={Your Title},
-  author={Your team},
-  journal={Location},
-  year={Year}
+@article{pang2024cellotype,
+  title={CelloType: A Unified Model for Segmentation and Classification of Tissue Images},
+  author={Pang, Minxing and Roy, Tarun Kanti and Wu, Xiaodong and Tan, Kai},
+  journal={Nature Methods},
+  year={2024}
 }
 ```
 ### Acknowledgement
