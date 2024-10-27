@@ -25,6 +25,7 @@ Download ``models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_ma
 Train model
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Note: If you want to train the model using multi-channel images with a number of channels other than 3, you can modify the ``cfg.MODEL.IN_CHANS`` setting in the ``train_tissuenet.py`` script.
 
 .. code-block:: bash
 

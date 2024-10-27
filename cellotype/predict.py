@@ -155,7 +155,7 @@ class Detectron2DetectionModel(DetectionModel):
         cfg.merge_from_list(args.opts)
         cfg.MODEL.IN_CHANS = self.channels
         cfg.MODEL.WEIGHTS = self.model_path
-        cfg.TEST.DETECTIONS_PER_IMAGE = 1000
+        cfg.TEST.DETECTIONS_PER_IMAGE = 2000
         cfg.MODEL.DEVICE = self.device
         cfg.freeze()
         default_setup(cfg, args)

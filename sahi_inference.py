@@ -2,7 +2,7 @@ from sahi.utils.detectron2 import Detectron2TestConstants
 
 # import required functions, classes
 from sahi import AutoDetectionModel
-from sahi.predict import get_sliced_prediction, predict, get_prediction
+from sahi_predict import get_sliced_prediction, predict, get_prediction
 from sahi.utils.file import download_from_url
 from sahi.utils.cv import read_image
 from cellotype.predict import Detectron2DetectionModel
@@ -30,25 +30,30 @@ detection_model = Detectron2DetectionModel(
     model_path='cellotype/models/tissuenet_model_0019999.pth',
     config_path='cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml',
     confidence_threshold=0.3,
-    image_size=512,
+    image_size=768,
     device="cuda:0", # or 'cuda:0'
     channels=3,
 )
 
-img_path = 'data/example/example_sahi.png'
+img_path = 'data/example/example_large.png'
 logging.info("Predicting...")
 start = time.time()
 result = get_sliced_prediction(
     img_path,
     detection_model,
-    slice_height = 512,
-    slice_width = 512,
-    overlap_height_ratio = 0.1,
-    overlap_width_ratio = 0.1,
+    slice_height = 768,
+    slice_width = 768,
+    overlap_height_ratio = 0.05,
+    overlap_width_ratio = 0.05,
+    perform_standard_pred = False,
 )
 end = time.time()
 
 logging.info("Time elapsed (min): {}".format((end-start)/60))
+
+output = get_mask_from_result(result)
+im = Image.fromarray(output.astype('int32'))
+im.save('figures/example_sahi.tif')
 
 logging.info("Saving visualization results...")
 
@@ -59,6 +64,6 @@ rgb_image = create_rgb_image(img_data, channel_colors=['blue', 'green'])
 fig = plt.figure(figsize=(10,10))
 ax = fig.add_subplot(111)
 ax.imshow(make_outline_overlay(rgb_image, predictions=np.reshape(output, (1, output.shape[0], output.shape[1], 1)))[0])
-plt.savefig('figures/example_sahi.png', dpi=600)
+plt.savefig('figures/example_large.png', dpi=600)
 
 
