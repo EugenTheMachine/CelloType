@@ -15,6 +15,7 @@ CelloType is an end-to-end Transformer-based method for automated cell/nucleus s
    :caption: Examples:
 
    notebooks/cell_segmentation
+   inference_large
    notebooks/tissue_annotation
    
 .. toctree::

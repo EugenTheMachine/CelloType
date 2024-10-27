@@ -1,22 +1,31 @@
 Quickstart
 ------------------------------
 
-Clone the repository:
+Clone the repository and download the pre-trained models:
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
     git clone https://github.com/maxpmx/CelloType.git
     cd CelloType
 
-Then Download the model weights:
-
 .. code-block:: bash
 
-    cd data
+    cd models
     sh download.sh
     cd ..
 
-Predict on an example image:
+Prepare the input images
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Convert the input images into an RGB format where the blue channel represents the nuclear channel, the green channel corresponds to the membrane channel.
+
+.. image:: ../../data/example/example_tissuenet.png
+    :width: 250px
+    :alt: drawing
+
+Inference the cell segmentation
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 

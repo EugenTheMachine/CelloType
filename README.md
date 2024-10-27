@@ -56,7 +56,7 @@ cd CelloType
 Then Download the model weights:
 
 ```bash
-cd data
+cd models
 sh download.sh
 cd ..
 ```
