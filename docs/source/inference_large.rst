@@ -92,3 +92,4 @@ Save the result and visualization
 
 .. image:: ../../figures/example_large_visualize.png
     :width: 600px
+    :alt: drawing
