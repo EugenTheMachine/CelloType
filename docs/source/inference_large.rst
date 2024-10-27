@@ -90,6 +90,6 @@ Save the result and visualization
     plt.savefig('figures/example_large.png', dpi=600)
 
 
-.. image:: ../../figures/tissuenet/example_large.png
+.. image:: ../../figures/tissuenet/example_large_visualize.png
     :width: 600px
     :alt: drawing
