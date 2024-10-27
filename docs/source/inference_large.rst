@@ -74,6 +74,7 @@ If the GPU memory is not enough, you can reduce the ``image_size``, ``slice_heig
 Save the result and visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: python
+    
     output = get_mask_from_result(result)
     im = Image.fromarray(output.astype('int32'))
     im.save('figures/example_sahi.tif')
@@ -84,7 +85,7 @@ Save the result and visualization
     img_data = io.imread(img_path)[:,:,[2,1]]
     img_data = np.reshape(img_data, (1, img_data.shape[0], img_data.shape[1], 2))
     rgb_image = create_rgb_image(img_data, channel_colors=['blue', 'green'])
-    fig = plt.figure(figsize=(10,10))
+    fig = plt.figure(figsize=(30,10))
     ax = fig.add_subplot(111)
     ax.imshow(make_outline_overlay(rgb_image, predictions=np.reshape(output, (1, output.shape[0], output.shape[1], 1)))[0])
     plt.savefig('figures/example_large.png', dpi=600)
