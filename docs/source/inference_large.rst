@@ -6,7 +6,7 @@ Process the input image
 Convert the input images into an RGB format where the blue channel represents the nuclear channel, the green channel corresponds to the membrane channel.
 
 .. image:: ../../data/example/example_large.png
-    :width: 500px
+    :width: 600px
     :alt: drawing
 
 
@@ -55,7 +55,7 @@ Run sliced inference
     image_size=768,
     device="cuda:0", # or 'cuda:0'
     channels=3,
-)
+    )
     img_path = 'data/example/example_large.png'
     logging.info("Predicting...")
     start = time.time()
@@ -91,5 +91,5 @@ Save the result and visualization
 
 
 .. image:: ../../figures/tissuenet/example_large.png
-    :width: 500px
+    :width: 600px
     :alt: drawing
