@@ -29,8 +29,8 @@ def get_mask_from_result(result):
 detection_model = Detectron2DetectionModel(
     model_path='cellotype/models/tissuenet_model_0019999.pth',
     config_path='cellotype/configs/maskdino_R50_bs16_50ep_4s_dowsample1_2048.yaml',
-    confidence_threshold=0.3,
-    image_size=768,
+    confidence_threshold=0.4,
+    image_size=512,
     device="cuda:0", # or 'cuda:0'
     channels=3,
 )
@@ -41,8 +41,8 @@ start = time.time()
 result = get_sliced_prediction(
     img_path,
     detection_model,
-    slice_height = 768,
-    slice_width = 768,
+    slice_height = 512,
+    slice_width = 512,
     overlap_height_ratio = 0.05,
     overlap_width_ratio = 0.05,
     perform_standard_pred = False,
