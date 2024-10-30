@@ -2,8 +2,9 @@ Installation
 ------------------------------
 
 First, install dependencies
-- Linux with Python = 3.8.*
-- Detectron2: follow `Detectron2 <https://detectron2.readthedocs.io/en/latest/tutorials/install.html>`_ installation instructions.
+
+* Linux with Python = 3.8.*
+* Detectron2: follow `Detectron2 <https://detectron2.readthedocs.io/en/latest/tutorials/install.html>`_ installation instructions.
 
 .. code-block:: bash
 
