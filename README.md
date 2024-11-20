@@ -6,7 +6,7 @@
 </div>
 
 # Description   
-CelloType [(Nature Methods 2024)](https://www.nature.com/articles/s41592-024-02513-1) is an end-to-end Transformer-based method for automated cell/nucleus segmentation and cell type classification  
+CelloType [(Nature Methods 2024)](https://www.nature.com/articles/s41592-024-02513-1) is an end-to-end Transformer-based method for automated cell/nucleus segmentation and cell-type classification.  
 [[Documentation]](https://cellotype.readthedocs.io/)
 
 ![overview](figures/overview.png)
