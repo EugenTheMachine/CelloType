@@ -3,7 +3,11 @@
 
 # CelloType   
 
-
+<div align="center">  
+[[Nature Methods 2024]](https://www.nature.com/articles/s41592-024-02513-1)
+  
+[[Documentation]](https://cellotype.readthedocs.io/)
+  
 </div>
 
 # Description   
