@@ -19,3 +19,12 @@ Change the corresponding paths in the `prep_codex.py` script.
 ```bash
 python prep_codex.py
 ```
+
+## Xenium Dataset
+Example raw data can be downloaded from [Xenium](https://www.10xgenomics.com/datasets?query=Xenium&page=1&configure%5BhitsPerPage%5D=50&configure%5BmaxValuesPerFacet%5D=1000).
+
+Used the following  scripts to preprocess the data. 
+
+1. `prep_xenium_fov.py`
+2. `prep_xenium_patch.py`
+3. `prep_xenium_input.py`
