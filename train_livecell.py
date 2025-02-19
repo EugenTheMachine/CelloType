@@ -68,7 +68,7 @@ if __name__ == "__main__":
     parser.add_argument('--eval_only', action='store_true')
     parser.add_argument('--EVAL_FLAG', type=int, default=1)
     # adding new arg for specifying data dir (useful for kaggle training)
-    parser.add_argument('--data_dir', type=str, default="/kaggle/input/livecell-cellotype")
+    parser.add_argument('--data_dir', type=str, default="data/livecell")
     args = parser.parse_args()
     # random port
     port = random.randint(1000, 20000)
