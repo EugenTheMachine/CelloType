@@ -13,11 +13,16 @@ def setup(args):
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
     cfg.MODEL.WEIGHTS = './models/maskdino_swinl_50ep_300q_hid2048_3sd1_instance_maskenhanced_mask52.3ap_box59.0ap.pth'
-    
+
     cfg.MODEL.IN_CHANS = 3
     cfg.DATASETS.TRAIN = ("cell_train",)
     cfg.DATASETS.VAL = ("cell_val",)
-    cfg.DATASETS.TEST = ('cell_test',)
+
+    # since TEST subset is used for evaluation, we will set it to be validation dataset
+    # to avoid any data leakage
+    # cfg.DATASETS.TEST = ('cell_test',)
+    cfg.DATASETS.TEST = ('cell_val',)
+
     cfg.OUTPUT_DIR = '/kaggle/working/output/livecell'
     cfg.SOLVER.AMP.ENABLED = False
 
@@ -35,8 +40,8 @@ def main(args):
         DatasetCatalog.register("cell_" + d, lambda d=d: np.load(os.path.join(data_dir, 'dataset_dicts_cell_{}.npy'.format(d)), allow_pickle=True))
         # MetadataCatalog.get("cell_" + d).set(thing_classes=["cell"])
         MetadataCatalog.get("cell_" + d).set(thing_classes=['A172', 'BT474', 'BV2', 'Huh7', 'MCF7', 'SHSY5Y', 'SkBr3', 'SKOV3'])
-        
-    
+
+
     args.resume = True
 
 
