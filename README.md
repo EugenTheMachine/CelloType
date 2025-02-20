@@ -5,7 +5,10 @@
   
 </div>
 
-# Description   
+## Fork Notes
+This fork is created to train CelloType model on LIVECell dataset in Kaggle environment. To train the model, go to [this notebook](https://www.kaggle.com/code/eugenfromkharkov/cellotype-training/edit), choose GPU P100 accelerator, pin to original environment (2024-10-03) and then run all cells in the notebook.
+
+## Description   
 CelloType [(Nature Methods 2024)](https://www.nature.com/articles/s41592-024-02513-1) is an end-to-end Transformer-based method for automated cell/nucleus segmentation and cell-type classification.  
 [[Documentation]](https://cellotype.readthedocs.io/)
 
