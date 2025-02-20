@@ -23,7 +23,7 @@ def setup(args):
     # cfg.DATASETS.TEST = ('cell_test',)
     cfg.DATASETS.TEST = ('cell_val',)
 
-    cfg.OUTPUT_DIR = '/kaggle/working/output/livecell'
+    cfg.OUTPUT_DIR = './output/livecell'
     cfg.SOLVER.AMP.ENABLED = False
 
     cfg.freeze()
